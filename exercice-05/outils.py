@@ -1,16 +1,9 @@
-import math
-
-
 def convertir_note(texte):
     """Convertit "12,5" en 12.5. Renvoie None si le texte n'est pas une note valide."""
     try:
-        note = float(texte.replace(",", "."))
-    except (ValueError, AttributeError):
+        return float(texte.replace(",", "."))
+    except ValueError:
         return None
-
-    if not math.isfinite(note):
-        return None
-    return note
 
 
 def moyenne(valeurs):
