@@ -10,12 +10,13 @@ for temperature in temperatures:
         nb_jours_chauds += 1
 print(f"Jours > 15 °C : {nb_jours_chauds}")
 
-temperatures_f = [round(c * 9 / 5 + 32, 1) for c in temperatures]
+temperatures_f = []
+for c in temperatures:
+    f = c * 9 / 5 + 32
+    temperatures_f.append(round(f, 1))
 print(f"Fahrenheit : {temperatures_f}")
 
 for i, temperature in enumerate(temperatures, start=1):
     print(f"Jour {i} : {temperature} °C")
-
-
     
 
